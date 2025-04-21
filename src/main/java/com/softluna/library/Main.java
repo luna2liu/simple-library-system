@@ -10,6 +10,9 @@ public class Main {
         User user = Login.login();
         System.out.println("登陆成功，欢迎：" + user.getClass().getSimpleName() + " " + user.name);
 
-        user.showMenu();
+        while (true) {
+            int choice = user.menu();
+            user.doOperation(choice);
+        }
     }
 }
