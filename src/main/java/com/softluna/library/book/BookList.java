@@ -1,26 +1,32 @@
 package com.softluna.library.book;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookList {
-    private Book[] books;
-    private int size;
+    private final List<Book> books;
 
     public BookList() {
-        this.books = new Book[100];
-        this.size = 0;
+        books = new ArrayList<>();
     }
 
     public void addBook(Book book) {
-        books[size++] = book;
+        books.add(book);
     }
 
     public Book getBook(int index) {
-        if (index >= 0 && index < size) {
-            return books[index];
-        }
-        return null;
+        return books.get(index);
     }
 
     public int getSize() {
-        return size;
+        return books.size();
+    }
+
+    public List<Book> getAllBooks() {
+        return books;
+    }
+
+    public void removeBook(int index) {
+        books.remove(index);
     }
 }

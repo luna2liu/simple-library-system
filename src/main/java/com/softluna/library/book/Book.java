@@ -30,9 +30,9 @@ public class Book {
     @Override
     public String toString() {
         return "《" +
-                "name='" + name + "》 - 作者：" +
+                name + "》，作者：" +
                  author +
                 "，价格：" + price +
-                "元，类型：" + (isBorrowed ? "（已借出）" : "（可借）");
+                "元，类型：" + type + "，状态：" + (isBorrowed ? "已借出" : "可借");
     }
 }
