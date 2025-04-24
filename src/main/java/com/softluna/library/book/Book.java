@@ -1,6 +1,8 @@
 package com.softluna.library.book;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
     private String name;
     private String author;
     private int price;

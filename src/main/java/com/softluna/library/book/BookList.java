@@ -1,9 +1,10 @@
 package com.softluna.library.book;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookList {
+public class BookList implements Serializable {
     private final List<Book> books;
 
     public BookList() {
